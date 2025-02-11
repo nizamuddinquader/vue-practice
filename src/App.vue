@@ -12,15 +12,24 @@
   const bRed = 'border-top:3px solid red'
   const bTeal = 'border-top:3px solid teal'
     
-  
+  const messageType = true
 
+   
+  const bgColor = {
+    backgroundColor:'black'
+  } 
 
-  const messageType = true 
+  const bgcColorChange = "error"
 
-  // if("error"==messageType){
-  //   border.borderTop: '2px solid green'
+  if("error"==bgcColorChange){
+    bgColor.backgroundColor ='red'
+    bgColor.color = 'black'
+    bgColor.fontSize = '20px'
+    bgColor.borderLeft = '2px solid black'
+    bgColor.borderRight = '2px solid black'
+    bgColor.fontWeight = '500'
 
-  // }
+  }
 
 
 </script>
@@ -29,7 +38,7 @@
   
     <div class="container">
       <div class="row">
-        <div class="col-md-12 d-flex justify-content-center mt-5 text-white">
+        <div class="col-md-12 d-flex justify-content-center mt-5 text-white p-0">
           <div class=" p-3 " :class="bg.bPrimary">I am col 1, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, excepturi!</div>
           <div class=" p-3 me-5 ms-5 " :class="bg.bSecondary">I am col 2, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, animi!</div>
           <div class=" p-3 " :class="bg.bSuccess">I am col 3, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, impedit!</div>
@@ -40,7 +49,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center mt-5 text-white text-center p-0">
-        <div class="bg-danger p-3 flex-grow-1 p=0">I am col 12, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, excepturi!</div>
+        <div class="p-3 flex-grow-1 p=0" :style="bgColor">I am col 12, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, excepturi!</div>
       </div>
     </div>
   </div>
